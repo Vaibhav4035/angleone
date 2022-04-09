@@ -1,0 +1,15 @@
+public class ReaddataFromSheet {
+
+	public static void main(String[] args) throws EncryptedDocumentException, IOException {
+		
+		for(int i=1; i<=5; i++) {
+		FileInputStream path = new FileInputStream("F:\\Exceldata\\Testdata.xlsx");
+		
+		 Sheet readdata = WorkbookFactory.create(path).getSheet("Sheet1");
+		 
+	 String exceldata = readdata.getRow(i).getCell(0).getStringCellValue();
+	 
+	 
+	     System.out.println(exceldata);
+		 
+		} 
